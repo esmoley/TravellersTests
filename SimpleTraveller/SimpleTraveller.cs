@@ -55,7 +55,7 @@ namespace SimpleTraveller
                     // Если надо оплатить, оплачиваем
                     if (currentValue != cells[currentPosition.Item1][nextColumn])
                     {
-                        paidUserRouteFrom.Add(userRoute.Count - 1);
+                        paidUserRouteFrom.Add(userRoute.Count);
                     }
 
                     SetPosition(userRoute, ref currentPosition, (currentPosition.Item1, nextColumn)); // Двигаемся дальше
@@ -63,7 +63,7 @@ namespace SimpleTraveller
                 }
                 else if (tollDownAndNoWall) // Сюда попадаем, только если справа стена, но чтобы двигаться вниз - нужно оплатить
                 {
-                    paidUserRouteFrom.Add(userRoute.Count - 1); // оплачиваем
+                    paidUserRouteFrom.Add(userRoute.Count); // оплачиваем
                     SetPosition(userRoute, ref currentPosition, (nextRow, currentPosition.Item2)); // двигаемся дальше
                     continue;
                 }

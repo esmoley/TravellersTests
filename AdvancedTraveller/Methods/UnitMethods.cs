@@ -41,7 +41,7 @@ namespace AdvancedTraveller.Methods
 
             Position newPosition = GetNextPosition(unit.Position, unit.Direction);
             if (IsOutOfBounds(newPosition, ref unit.Cells)) unit.Stuck = true;
-            else if (unit.Cells[unit.Position.A][unit.Position.B] != unit.Cells[newPosition.A][newPosition.B]) unit.PaidHistoryIndex.Add(unit.History.Count-1);
+            else if (unit.Cells[unit.Position.A][unit.Position.B] != unit.Cells[newPosition.A][newPosition.B]) unit.PaidHistoryIndex.Add(unit.History.Count);
             unit.Position = newPosition;
             unit.History.Add(unit.Position);
             if (IsFinished(unit.Position, ref unit.Cells)) unit.Finished = true;

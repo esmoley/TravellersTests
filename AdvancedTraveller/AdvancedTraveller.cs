@@ -35,7 +35,7 @@ namespace AdvancedTraveller
                 foreach(Unit unit in units)
                 {
                     UnitMethods.Move(unit);
-                    end = unit.Stuck || unit.Finished;
+                    end = end == true && (unit.Stuck || unit.Finished);
                 }
                 int unitsAdded = UnitMethods.AddNewUnits(ref units);
                 end = end == true && unitsAdded==0;

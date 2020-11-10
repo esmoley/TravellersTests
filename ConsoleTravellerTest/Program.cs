@@ -14,6 +14,9 @@ namespace ConsoleTravellerTest
             var cellsCollection = new List<int[][]>
             {
                 new int[][] {
+                    new int[] { 0 }
+                },
+                new int[][] {
                     new int[] { 0, 0, 1 },
                     new int[] { 0, 1, 0 },
                     new int[] { 0, 1, 0}

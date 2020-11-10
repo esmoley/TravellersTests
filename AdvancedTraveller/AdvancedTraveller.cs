@@ -50,7 +50,7 @@ namespace AdvancedTraveller
             }
 
             // Находим лучшего юнита
-            Unit bestUnit = units[0];
+            Unit bestUnit= units.Count==0?new Unit(new Position(0,0),DIRECTION.DOWN,cells): units[0];
             for(int i=1;i<units.Count;i++)
             {
                 if (bestUnit.PaidHistoryIndex.Count > units[i].PaidHistoryIndex.Count)

@@ -43,5 +43,7 @@ cells = [
 Задача решена двумя способами:
 1. На скорость: движение вниз или вправо.
 2. На эффективность: поиск лучшего решения используя все возможные вариации.
+
 Точка входа: ConsoleTravellerTest.Program
+
 Тесты: NUnitTestTraveller.AdvancedTravellerTests и NUnitTestTraveller.SimpleTravellerTests
